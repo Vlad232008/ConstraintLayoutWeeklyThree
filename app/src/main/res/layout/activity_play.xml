@@ -9,14 +9,16 @@
 
     <ImageView
         android:id="@+id/ivImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="15dp"
-        android:scaleType="fitXY"
+        android:padding="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image"
+        app:layout_constraintBottom_toTopOf="@+id/tvMusic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvMusic"
@@ -24,13 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:text="TextView"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnShare"
         app:layout_constraintEnd_toStartOf="@+id/btnShare"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnShare"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/btnShare" />
 
     <TextView
         android:id="@+id/tvExecutor"
@@ -39,6 +39,7 @@
         android:layout_marginLeft="10dp"
         android:text="TextView"
         android:textSize="16sp"
+        android:textColor="@color/light_blue"
         app:layout_constraintEnd_toStartOf="@+id/btnShare"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMusic" />
@@ -50,8 +51,9 @@
         android:layout_margin="10dp"
         android:background="@null"
         android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnMenu"
-        app:layout_constraintTop_toBottomOf="@+id/ivImage"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_share" />
 
     <ImageButton
@@ -116,11 +118,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
+        android:src="@drawable/ic_baseline_skip_previous_24"
         app:layout_constraintBottom_toBottomOf="@+id/btnPlay"
         app:layout_constraintEnd_toStartOf="@+id/btnPlay"
         app:layout_constraintStart_toEndOf="@+id/btnNotInt"
-        app:layout_constraintTop_toTopOf="@+id/btnPlay"
-        app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
+        app:layout_constraintTop_toTopOf="@+id/btnPlay" />
 
     <ImageButton
         android:id="@+id/btnPlay"
@@ -161,6 +163,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
+        android:hapticFeedbackEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_repeat_24" />
@@ -187,7 +190,7 @@
 
     <ImageButton
         android:id="@+id/imageButton15"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
