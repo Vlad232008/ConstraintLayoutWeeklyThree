@@ -179,17 +179,17 @@
         app:srcCompat="@drawable/ic_baseline_hd_24" />
 
     <ImageButton
-        android:id="@+id/imageButton14"
+        android:id="@+id/btnTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton15"
+        app:layout_constraintEnd_toStartOf="@+id/btnRandom"
         app:layout_constraintStart_toStartOf="@+id/btnPlay"
         app:srcCompat="@drawable/ic_baseline_timer_24" />
 
     <ImageButton
-        android:id="@+id/imageButton15"
+        android:id="@+id/btnRandom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@null"
