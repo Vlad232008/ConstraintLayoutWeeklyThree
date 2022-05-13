@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,6 +13,9 @@ class MainActivity : AppCompatActivity() {
         val btnOne: Button = findViewById(R.id.btnOne)
         btnOne.setOnClickListener {
             startActivity(Intent(this,PlayActivity::class.java))
+        }
+        btnTwo.setOnClickListener {
+            startActivity(Intent(this,ActivityContacts::class.java))
         }
     }
 }
