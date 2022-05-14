@@ -11,10 +11,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:gravity="right"
-        android:text="TextView"
+        android:text="789+56"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,10 +25,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="15dp"
         android:gravity="right"
-        android:text="TextView"
+        android:text="845"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,10 +38,10 @@
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="20dp"
         android:background="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton26"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton26"
+        app:layout_constraintStart_toStartOf="@+id/imageButton26"
         app:layout_constraintTop_toBottomOf="@+id/tvResult"
         app:srcCompat="@drawable/ic_baseline_content_cut_24" />
 
@@ -49,10 +49,10 @@
         android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton23"
+        app:layout_constraintStart_toStartOf="@+id/imageButton23"
         app:layout_constraintTop_toTopOf="@+id/imageButton3"
         app:srcCompat="@drawable/ic_baseline_access_time_24" />
 
@@ -61,9 +61,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:layout_marginLeft="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton24"
+        app:layout_constraintStart_toStartOf="@+id/imageButton24"
         app:layout_constraintTop_toTopOf="@+id/imageButton3"
         app:srcCompat="@drawable/ic_baseline_straighten_24" />
 
@@ -71,19 +71,260 @@
         android:id="@+id/imageButton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton25"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButton25"
         app:layout_constraintTop_toTopOf="@+id/imageButton3"
         app:srcCompat="@drawable/ic_baseline_calculate_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_2" />
 
     <ImageButton
         android:id="@+id/imageButton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton8"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:srcCompat="@mipmap/ic_launcher_1" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toEndOf="@+id/imageButton10"
+        app:srcCompat="@mipmap/ic_launcher_3" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton10"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton10"
+        app:layout_constraintStart_toStartOf="@+id/imageButton10"
+        app:srcCompat="@mipmap/ic_launcher_5" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton9"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton9"
+        app:layout_constraintStart_toStartOf="@+id/imageButton9"
+        app:srcCompat="@mipmap/ic_launcher_6" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton7"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton7"
+        app:layout_constraintStart_toStartOf="@+id/imageButton7"
+        app:srcCompat="@mipmap/ic_launcher_7" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton8"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton8"
+        app:layout_constraintStart_toStartOf="@+id/imageButton8"
+        app:srcCompat="@mipmap/ic_launcher_8" />
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton11"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton11"
+        app:layout_constraintStart_toStartOf="@+id/imageButton11"
+        app:srcCompat="@mipmap/ic_launcher_9" />
+
+    <ImageButton
+        android:id="@+id/imageButton16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton12"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton12"
+        app:layout_constraintStart_toStartOf="@+id/imageButton12"
+        app:srcCompat="@mipmap/ic_launcher_10" />
+
+    <ImageButton
+        android:id="@+id/imageButton17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton13"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton13"
+        app:layout_constraintStart_toStartOf="@+id/imageButton13"
+        app:srcCompat="@mipmap/ic_launcher_11" />
+
+    <ImageButton
+        android:id="@+id/imageButton18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton14"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton14"
+        app:layout_constraintStart_toStartOf="@+id/imageButton14"
+        app:srcCompat="@mipmap/ic_launcher_12" />
+
+    <ImageButton
+        android:id="@+id/imageButton19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton15"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton15"
+        app:layout_constraintStart_toStartOf="@+id/imageButton15"
+        app:srcCompat="@mipmap/ic_launcher_13" />
+
+    <ImageButton
+        android:id="@+id/imageButton20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton16"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton16"
+        app:layout_constraintStart_toStartOf="@+id/imageButton16"
+        app:srcCompat="@mipmap/ic_launcher_14" />
+
+    <ImageButton
+        android:id="@+id/imageButton21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton17"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton17"
+        app:layout_constraintStart_toStartOf="@+id/imageButton17"
+        app:srcCompat="@mipmap/ic_launcher_15" />
+
+    <ImageButton
+        android:id="@+id/imageButton22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton18"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton18"
+        app:layout_constraintStart_toStartOf="@+id/imageButton18"
+        app:srcCompat="@mipmap/ic_launcher_16" />
+
+    <ImageButton
+        android:id="@+id/imageButton23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton19"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton19"
+        app:layout_constraintStart_toStartOf="@+id/imageButton19"
+        app:srcCompat="@mipmap/ic_launcher_17" />
+
+    <ImageButton
+        android:id="@+id/imageButton24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton20"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton20"
+        app:layout_constraintStart_toStartOf="@+id/imageButton20"
+        app:srcCompat="@mipmap/ic_launcher_18" />
+
+    <ImageButton
+        android:id="@+id/imageButton25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton21"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton21"
+        app:layout_constraintStart_toStartOf="@+id/imageButton21"
+        app:srcCompat="@mipmap/ic_launcher_19" />
+
+    <ImageButton
+        android:id="@+id/imageButton26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton22"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton22"
+        app:layout_constraintStart_toStartOf="@+id/imageButton22"
+        app:srcCompat="@mipmap/ic_launcher_20" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

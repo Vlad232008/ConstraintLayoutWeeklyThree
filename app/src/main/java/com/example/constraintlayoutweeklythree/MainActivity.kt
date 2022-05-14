@@ -17,5 +17,11 @@ class MainActivity : AppCompatActivity() {
         btnTwo.setOnClickListener {
             startActivity(Intent(this,ActivityContacts::class.java))
         }
+        btnThree.setOnClickListener {
+            startActivity(Intent(this,Calculator::class.java))
+        }
+        btnFour.setOnClickListener {
+            startActivity(Intent(this,BeginActivity::class.java))
+        }
     }
 }

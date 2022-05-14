@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConstraintLayoutWeeklyThree">
         <activity
+            android:name=".BeginActivity"
+            android:exported="false" />
+        <activity
             android:name=".Calculator"
             android:exported="false" />
         <activity
