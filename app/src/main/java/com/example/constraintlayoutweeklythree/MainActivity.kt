@@ -10,7 +10,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val btnOne: Button = findViewById(R.id.btnOne)
         btnOne.setOnClickListener {
             startActivity(Intent(this,PlayActivity::class.java))
         }
