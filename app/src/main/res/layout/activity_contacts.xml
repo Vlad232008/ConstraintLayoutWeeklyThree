@@ -104,7 +104,7 @@
         app:layout_constraintTop_toTopOf="@+id/ivData" />
 
     <ImageView
-        android:id="@+id/ivPrimacy"
+        android:id="@+id/ivPrivacy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
@@ -121,15 +121,15 @@
         android:text="Privacy and Security"
         app:layout_constraintBottom_toTopOf="@+id/tvData"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivPrimacy"
-        app:layout_constraintTop_toTopOf="@+id/ivPrimacy" />
+        app:layout_constraintStart_toEndOf="@+id/ivPrivacy"
+        app:layout_constraintTop_toTopOf="@+id/ivPrivacy" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/ivPrimacy"
+        app:layout_constraintBottom_toTopOf="@+id/ivPrivacy"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_notifications_none_24" />
 
