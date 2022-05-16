@@ -4,6 +4,7 @@ package com.example.constraintlayoutweeklythree
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.SeekBar
@@ -23,21 +24,25 @@ class PlayActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
     private val arrayInfoMusic: MutableList<String> =
         mutableListOf("R. Armando Morabito", "Imagine dragons", "Linkin Park")
     private val arrayLike: MutableList<Int> =
-        mutableListOf(0,0,0)
+        mutableListOf(0, 0, 0)
     private val arrayDisLike: MutableList<Int> =
-        mutableListOf(0,0,0)
+        mutableListOf(0, 0, 0)
     private val arrayImage =
         mutableListOf(R.drawable.image, R.drawable.imagine, R.drawable.linkin)
-    private val arrayRangeMusic: MutableList<Int> = mutableListOf(327,184,219)
+    private val arrayRangeMusic: MutableList<Int> = mutableListOf(327, 184, 219)
 
     private val random = Random()
     private fun rand(): Int {
         return random.nextInt(arrayMusic.size)
     }
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val startTime = System.nanoTime()
         setContentView(R.layout.activity_play)
+        val totalTime = System.nanoTime() - startTime
+        Log.d("MyLog", "Отрисовка плеера: $totalTime")
         actionBarSetting()
         title = "Сейчас играет"
         seekBar.min = 0
@@ -55,20 +60,20 @@ class PlayActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
         return super.onCreateOptionsMenu(menu)
     }
 
-    private fun reactionButton(){
+    private fun reactionButton() {
         btnNext.setOnClickListener {
-            if (btnRandom.isSelected){
+            if (btnRandom.isSelected) {
                 do {
                     oldRand = rand()
-                } while (index ==oldRand)
+                } while (index == oldRand)
                 index = oldRand
             } else index++
             if (index == arrayMusic.size) index = 0
             tvMusic.text = arrayMusic[index]
             tvExecutor.text = arrayInfoMusic[index]
             ivImage.setImageResource(arrayImage[index])
-            btnLike.isSelected = arrayLike[index]==1
-            btnNotInt.isSelected = arrayDisLike[index]==1
+            btnLike.isSelected = arrayLike[index] == 1
+            btnNotInt.isSelected = arrayDisLike[index] == 1
             seekBar.max = arrayRangeMusic[index]
             tvEnd.text = timeToString(arrayRangeMusic[index].toLong())
             seekBar.progress = 0
@@ -79,8 +84,8 @@ class PlayActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
             tvMusic.text = arrayMusic[index]
             tvExecutor.text = arrayInfoMusic[index]
             ivImage.setImageResource(arrayImage[index])
-            btnLike.isSelected = arrayLike[index]==1
-            btnNotInt.isSelected = arrayDisLike[index]==1
+            btnLike.isSelected = arrayLike[index] == 1
+            btnNotInt.isSelected = arrayDisLike[index] == 1
             seekBar.max = arrayRangeMusic[index]
             tvEnd.text = timeToString(arrayRangeMusic[index].toLong())
             seekBar.progress = 0
@@ -104,8 +109,7 @@ class PlayActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
                 arrayDisLike[index] = 1
                 btnLike.isSelected = false
                 arrayLike[index] = 0
-            }
-            else {
+            } else {
                 btnLike.isSelected = false
                 arrayDisLike[index] = 0
             }
@@ -125,8 +129,7 @@ class PlayActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
                 arrayLike[index] = 1
                 btnNotInt.isSelected = false
                 arrayDisLike[index] = 0
-            }
-            else {
+            } else {
                 arrayLike[index] = 0
                 btnNotInt.isSelected = false
             }
@@ -134,12 +137,13 @@ class PlayActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
         btnShare.setOnClickListener {
             startActivity(
                 Intent.createChooser(
-                    ShareHelper.shareMusic(arrayMusic[index],arrayInfoMusic[index]),
+                    ShareHelper.shareMusic(arrayMusic[index], arrayInfoMusic[index]),
                     "Share by"
                 )
             )
         }
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {

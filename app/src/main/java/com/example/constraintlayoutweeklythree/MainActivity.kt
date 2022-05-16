@@ -11,16 +11,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btnOne.setOnClickListener {
-            startActivity(Intent(this,PlayActivity::class.java))
+            startActivity(Intent(this, PlayActivity::class.java))
         }
         btnTwo.setOnClickListener {
-            startActivity(Intent(this,ActivityContacts::class.java))
+            startActivity(Intent(this, ActivityContacts::class.java))
         }
         btnThree.setOnClickListener {
-            startActivity(Intent(this,Calculator::class.java))
+            startActivity(Intent(this, Calculator::class.java))
         }
         btnFour.setOnClickListener {
-            startActivity(Intent(this,BeginActivity::class.java))
+            startActivity(Intent(this, BeginActivity::class.java))
         }
     }
+    /*
+    D/MyLog: Отрисовка плеера: 123445539
+    D/MyLog: Отрисовка контакта телеграмма: 120242615
+    D/MyLog: Отрисовка калькулятора: 110399000
+    D/MyLog: Отрисовка входа: 86064615
+    */
 }
